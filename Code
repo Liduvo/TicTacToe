@@ -3,3 +3,22 @@ class Game():
         self.game_board = [["","",""],["","",""],["","",""]]
         self.status = True
         self.move = 0
+        
+        
+    def play(self):
+        pass
+
+    def p1chose(self):
+        pass
+
+    def p2chose(self):
+        pass
+
+    def dolumu(self):
+        pass
+
+    def game_board_wiev(self):
+        pass
+
+    def game_control(self):
+        pass
