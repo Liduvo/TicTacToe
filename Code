@@ -1,0 +1,5 @@
+class Game():
+    def __init__(self):
+        self.game_board = [["","",""],["","",""],["","",""]]
+        self.status = True
+        self.move = 0
