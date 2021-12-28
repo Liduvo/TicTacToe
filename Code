@@ -3,14 +3,20 @@ class Game():
         self.game_board = [["","",""],["","",""],["","",""]]
         self.status = True
         self.move = 0
-        
-        
+
     def play(self):
-        pass
+        if self.move % 2 == 0:
+            pass
+        else:
+            pass
+
+        self.move += 1
 
     def p1chose(self):
-        pass
-
+        self.game_board_wiev()
+        print("Player 1,")
+        line = int(input("Enter a line: "))
+        column = int(input("Enter a column: "))
     def p2chose(self):
         pass
 
@@ -18,7 +24,15 @@ class Game():
         pass
 
     def game_board_wiev(self):
-        pass
+        for i in self.tahta:
+            for j in i:
+                print(j,end=" ")
+
+            print("\n")
 
     def game_control(self):
         pass
+
+game = Game()
+
+while game.status()
