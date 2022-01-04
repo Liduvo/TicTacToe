@@ -6,22 +6,51 @@ class Game():
 
     def play(self):
         if self.move % 2 == 0:
-            pass
+            self.p1chose()
         else:
-            pass
+            self.p2chose()
 
         self.move += 1
 
     def p1chose(self):
         self.game_board_wiev()
         print("Player 1,")
-        line = int(input("Enter a line: "))
-        column = int(input("Enter a column: "))
-    def p2chose(self):
-        pass
 
-    def dolumu(self):
-        pass
+        line = int(input("Enter a line: "))
+        while line < 1 or line > 3:
+            line = int(input("The number value to be entered can be 1 ,2 and 3."))
+
+        column = int(input("Enter a column: "))
+        while line < 1 or line > 3:
+            line = int(input("The number value to be entered can be 1 ,2 and 3."))
+
+        if self.is_it_full(line,column):
+            self.p1chose()
+        else:
+            self.game_board[line][column] = "X"
+
+    def p2chose(self):
+        self.game_board_wiev()
+        print("Player 1,")
+
+        line = int(input("Enter a line: "))
+        while line < 1 or line > 3:
+            line = int(input("The number value to be entered can be 1 ,2 and 3."))
+
+        column = int(input("Enter a column: "))
+        while line < 1 or line > 3:
+            line = int(input("The number value to be entered can be 1 ,2 and 3."))
+
+        if self.is_it_full(line,column):
+            self.p2chose()
+        else:
+            self.game_board[line][column] = "0"
+
+    def is_it_full(self,line,column):
+        if self.game_board[line][column] != "":
+            return True
+        else:
+            return False
 
     def game_board_wiev(self):
         for i in self.tahta:
