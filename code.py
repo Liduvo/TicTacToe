@@ -10,6 +10,8 @@ class Game():
         else:
             self.p2chose()
 
+        self.status = self.game_control()
+
         self.move += 1
 
     def p1chose(self):
@@ -60,7 +62,13 @@ class Game():
             print("\n")
 
     def game_control(self):
-        pass
+        if[self.game_board[0][0], self.game_board[0][1], self.game_board[0][2]] == ["X","X","X"] or [self.game_board[0][0], self.game_board[0][1],self,game_board[0][2]] == ["O","O","O"]:
+            return False
+        
+        if[self.game_board[1][0], self.game_board[1][1], self.game_board[1][2]] == ["X","X","X"] or [self.game_board[1][0], self.game_board[1][1], self.game_board[1][2]] == ["O","0","0"]:
+            return False
+            
+        
 
 game = Game()
 
