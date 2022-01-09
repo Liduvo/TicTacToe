@@ -1,6 +1,7 @@
 class Game():
+
     def __init__(self):
-        self.game_board = [["","",""],["","",""],["","",""]]
+        self.game_board = [["[ ]","[ ]","[ ]"],["[ ]","[ ]","[ ]"],["[ ]","[ ]","[ ]"]]
         self.status = True
         self.move = 0
 
@@ -62,14 +63,37 @@ class Game():
             print("\n")
 
     def game_control(self):
-        if[self.game_board[0][0], self.game_board[0][1], self.game_board[0][2]] == ["X","X","X"] or [self.game_board[0][0], self.game_board[0][1],self,game_board[0][2]] == ["O","O","O"]:
+        if [self.game_board[0][0], self.game_board[0][1], self.game_board[0][2]] == ["X","X","X"] or [self.game_board[0][0], self.game_board[0][1],self,game_board[0][2]] == ["O","O","O"]:
             return False
         
-        if[self.game_board[1][0], self.game_board[1][1], self.game_board[1][2]] == ["X","X","X"] or [self.game_board[1][0], self.game_board[1][1], self.game_board[1][2]] == ["O","0","0"]:
+        if [self.game_board[1][0], self.game_board[1][1], self.game_board[1][2]] == ["X","X","X"] or [self.game_board[1][0], self.game_board[1][1], self.game_board[1][2]] == ["O","0","0"]:
             return False
             
+        if [self.game_board[2][0], self.game_board[2][1], self.game_board[2][2]] == ["X","X","X"] or [self.game_board[2][0], self.game_board[2][1], self.game_board[2][2]] == ["O","O","O"]:
+            return False
+
+
+        if [self.game_board[0][0], self.game_board[0][1], self.game_board[0][2]] == ["X","X","X"] or [self.game_board[0][0], self.game_board[0][1], self.game_board[0][2]] == ["O","O","O"]:
+            return False
+
+        if [self.game_board[1][0], self.game_board[1][1], self.game_board[1][2]] == ["X","X","X"] or [self.game_board[1][0], self.game_board[1][1], self.game_board[1][2]] == ["O","O","O"]:
+            return False
+
+        if [self.game_board[2][0], self.game_board[2][1], self.game_board[2][2]] == ["X","X","X"] or [self.game_board[2][0], self.game_board[2][1], self.game_board[2][2]] == ["O","O","O"]:
+            return False
+
+        
+        if [self.game_board[0][0], self.game_board[1][1], self.game_board[2][2]] == ["X","X","X"] or [self.game_board[0][0], self.game_board[0][1], self.game_board[0][2]] == ["O","O","O"]:
+            return False
+
+        if [self.game_board[0][2], self.game_board[1][1], self.game_board[2][0]] == ["X","X","X"] or [self.game_board[0][0], self.game_board[0][1], self.game_board[0][2]] == ["O","O","O"]:
+            return False
+
+        return True
+
         
 
 game = Game()
 
-while game.status()
+while game.status():
+    Game.play()
